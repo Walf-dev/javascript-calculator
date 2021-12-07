@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@700&display=swap");
+.container {
+  position: relative;
+  margin: 1% auto;
+  width: 298px;
+  border: 4px solid #373737;
+  border-radius: 8px;
+  background-color: #676e75;
+}
+.container::before {
+  position: absolute;
+  top: 0px;
+  left: 70px;
+  width: 160px;
+  height: 4px;
+  border-radius: 2px;
+  z-index: 1;
+  background-color: #676e75;
+  content: "";
+}
+.container::after {
+  position: absolute;
+  bottom: 0px;
+  left: 70px;
+  width: 160px;
+  height: 4px;
+  z-index: 1;
+  border-radius: 2px;
+  background-color: #676e75;
+  content: "";
+}
+.container .phone {
+  position: relative;
+  border: 10px solid black;
+  border-top: 70px solid black;
+  border-bottom: 50px solid black;
+  border-radius: 8px;
+  user-select: none;
+}
+.container .phone::before {
+  content: "SONY";
+  position: absolute;
+  top: -50px;
+  left: 115px;
+  font-size: 1.1em;
+  font-family: "Montagu Slab", serif;
+  font-weight: bold;
+  color: #676e75;
+}
+.container .phone::after {
+  content: "by Fredoly Wagni";
+  position: absolute;
+  bottom: -30px;
+  right: 79px;
+  font-size: 0.7em;
+  font-family: "Montagu Slab", serif;
+  color: #676e75;
+}
+.container .phone .phone-btns::before {
+  position: absolute;
+  bottom: 400px;
+  right: -17px;
+  z-index: -1;
+  width: 4px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #444444;
+  content: "";
+}
+.container .phone .phone-btns::after {
+  position: absolute;
+  bottom: 300px;
+  right: -17px;
+  z-index: -1;
+  width: 4px;
+  height: 80px;
+  border-radius: 4px;
+  background-color: #444444;
+  content: "";
+}
+.container .phone .camera::before {
+  position: absolute;
+  top: -51px;
+  left: 14px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  z-index: 2;
+  background-color: #202020;
+  content: "";
+}
+.container .phone .camera::after {
+  position: absolute;
+  top: -55px;
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: rgba(169, 169, 169, 0.3);
+  content: "";
+}
+.container .phone .sensor::before {
+  position: absolute;
+  top: -51px;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  z-index: 2;
+  background-color: #202020;
+  content: "";
+}
+.container .phone .sensor::after {
+  position: absolute;
+  top: -55px;
+  right: 20px;
+  width: 22px;
+  height: 14px;
+  border-radius: 11px;
+  background-color: rgba(169, 169, 169, 0.1);
+  content: "";
+}
+
+.display {
+  height: 60px;
+  width: 258px;
+  padding: 10px;
+  padding-top: 20px;
+  font-size: 2rem;
+  text-align: right;
+  background-color: #223f5c;
+  color: white;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
+.buttons {
+  display: grid;
+  width: 258px;
+  height: 340px;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas: "clear clear backspace divide" "seven eight nine multiply" "four five six subtract" "one two three add" "zero decimal equals equals";
+  background-color: #676e75;
+}
+.buttons > button {
+  border: none;
+  border-radius: 1.4rem;
+  font-size: 1.2em;
+  height: 60px;
+  cursor: pointer;
+}
+.buttons > button:hover {
+  opacity: 0.8;
+}
+.buttons > button:active {
+  opacity: 0.6;
+}
+.buttons .clear {
+  background-color: #c3efe3;
+  grid-area: clear;
+}
+.buttons .backspace {
+  grid-area: backspace;
+  background-color: #5aebf0;
+}
+.buttons .divide {
+  grid-area: divide;
+  background-color: #5aebf0;
+}
+.buttons .seven {
+  grid-area: seven;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .eight {
+  grid-area: eight;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .nine {
+  grid-area: nine;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .multiply {
+  grid-area: multiply;
+  background-color: #5aebf0;
+}
+.buttons .four {
+  grid-area: four;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .five {
+  grid-area: five;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .six {
+  grid-area: six;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .subtract {
+  grid-area: subtract;
+  background-color: #5aebf0;
+}
+.buttons .one {
+  grid-area: one;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .two {
+  grid-area: two;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .three {
+  grid-area: three;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .add {
+  grid-area: add;
+  background-color: #5aebf0;
+}
+.buttons .zero {
+  grid-area: zero;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .decimal {
+  grid-area: decimal;
+  background-color: #22355c;
+  color: white;
+}
+.buttons .equals {
+  grid-area: equals;
+}
